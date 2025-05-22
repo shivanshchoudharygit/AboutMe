@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-about',
-  standalone: true,
+  standalone: true, // Make sure this is a standalone component
+  imports: [CommonModule], // <-- this is critical for *ngIf and *ngFor
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
 })
-export class AboutComponent {}
+export class AboutComponent {
+  showSkills = true;
+  skills = ['Angular', 'TypeScript', 'HTML', 'CSS'];
+}

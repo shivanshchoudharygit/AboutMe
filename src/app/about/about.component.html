@@ -1,4 +1,15 @@
-<section>
-  <h2>Hello! I'm Shivansh</h2>
-  <p>Welcome to my personal About Me app. I'm a c# web developer learning Angular and building cool projects!</p>
-</section>
+<h2>I'm Shivansh</h2>
+
+<!-- Use *ngIf to conditionally show skills -->
+<div *ngIf="showSkills">
+  <h3>My Skills:</h3>
+  <ul>
+    <!-- Use *ngFor to loop through skills -->
+    <li *ngFor="let skill of skills">{{ skill }}</li>
+  </ul>
+</div>
+
+<!-- Toggle button -->
+<button (click)="showSkills = !showSkills">
+  {{ showSkills ? 'Hide Skills' : 'Show Skills' }}
+</button>
