@@ -1,9 +1,13 @@
 <app-header></app-header>
 
-<main class="content">
-  <app-about></app-about>
-  <app-profile></app-profile>
+<ul>
+  <li><button [routerLink]="'/about'">About</button></li>
+  <li><button [routerLink]="'/profile'">Profile</button></li>
+  <li><button [routerLink]="'/contact'">Contact</button></li>
+  <li><button [routerLink]="'/login'">Login</button></li>
 
-</main>
+</ul>
+
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
